@@ -1,0 +1,5 @@
+The error log file to see if there are errors in installation and issues
+with apache/php/sqlite etc are in:
+
+/var/log/apache2/error.log
+

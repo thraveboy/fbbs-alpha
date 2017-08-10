@@ -1,0 +1,51 @@
+body, div, span, form, input, #board_info, #dash {
+    font-family: monospace; 
+    background-color: black;
+    color: green;
+    font-size: large;
+}
+
+input {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-color: blue;
+    outline-width: 1px;
+    outline-width-left: 0px;
+    outline-width-right: 0px;
+    outline-color: lime;
+    color: green;
+}
+
+span.data_output {
+    font-family: monospace; 
+}
+
+input[type=submit], input#launch_command {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-color: blue;
+    outline-width: 1px;
+    outline-width-left: 0px;
+    outline-width-right: 0px;
+    outline-color: lime;
+    color: green;
+}
+
+p {
+  white-space: nowrap;
+}
+
+canvas {
+    font-family: monospace; 
+    outline-color: purple;
+    border-color: purple;
+    border-width: 2px;
+    outline-width: 2px;
+    background-color: black;
+    color: cyan;
+}
+
