@@ -15,6 +15,7 @@ while 1:
   for ticker_value in ticker_value_array:
     print(ticker_value)
     ticker_values_in_array.append(string.split(ticker_value,' '))
+  updated_values = 1
   for ticker_value_in_array in ticker_values_in_array:
       try:
         if (ticker_value_in_array[0].split(":")[1] in currencies):
@@ -25,6 +26,14 @@ while 1:
           api_command_str = "python fbbs_api.py '" + str(ticker_value_in_array[0]) + ":" + str(update_rate_mins) + "min' " + str(ticker_value)
           print(api_command_str)
           fbbs_api_obj = subprocess.check_output(api_command_str, shell=True)
+          updated_values += 1
       except:
         pass
+  api_command_str = "python fbbs_api.py 'Ticker:CryptoUpdates" + ":" + str(update_rate_mins) + "min'"
+  print(api_command_str)
+  fbbs_api_obj = subprocess.check_output(api_command_str, shell=True)
+  api_command_str = "python fbbs_api.py 'Ticker:CryptoUpdates" + ":" + str(update_rate_mins) + "min' " + str(updated_values)
+  print(api_command_str)
+  fbbs_api_obj = subprocess.check_output(api_command_str, shell=True)
+
   time.sleep(60 * update_rate_mins)
